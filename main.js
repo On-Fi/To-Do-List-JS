@@ -1,3 +1,12 @@
+// Function to toggle dark mode
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+    document.querySelector('.container').classList.toggle('dark-mode');
+    const taskElements = document.querySelectorAll('#taskList li');
+    taskElements.forEach(task => task.classList.toggle('dark-mode'));
+    saveTasks(); // Save dark mode state to local storage
+}
+
 // Function to load tasks from local storage
 function loadTasks() {
     const savedTasks = JSON.parse(localStorage.getItem('tasks')) || [];

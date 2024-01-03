@@ -1,3 +1,7 @@
+html {
+    background-color: red;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
@@ -6,6 +10,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .container {
@@ -13,15 +18,16 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
 }
 
 h1 {
     text-align: center;
-    cursor: default;
 }
 
 #app {
     text-align: center;
+    transition: background-color 0.3s;
 }
 
 #taskInput {
@@ -30,12 +36,14 @@ h1 {
 }
 
 button {
-    padding: 10px;
-    margin: -12px;
-    border-style: solid;
+    padding: 8px;
     cursor: pointer;
-    background-color: transparent;
-    border-radius: 8px;
+}
+
+button#toggleDarkMode {
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
 ul {
@@ -51,10 +59,39 @@ li {
     padding: 8px;
 }
 
-li:last-child {
-    border-bottom: none;
+li.completed {
+    color: #33c363;
 }
 
-.completed {
-    color: rgb(78, 166, 78);
+
+/* Dark mode */
+.dark-mode html {
+    background-color: #333;
+}
+.dark-mode body {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode .container {
+    background-color: #444;
+    color: #fff;
+}
+
+.dark-mode #app {
+    background-color: #444; /* Adjust as needed for dark mode background */
+}
+
+.dark-mode button#toggleDarkMode {
+    background-color: #555;
+    color: #fff;
+    border: 1px solid #fff; /* Border color for dark mode */
+}
+
+.dark-mode li {
+    border-bottom: 1px solid #666;
+}
+
+.dark-mode li.completed {
+    color: #33c363;
 }
