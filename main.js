@@ -49,7 +49,11 @@ function addTask() {
 // Function to complete a task
 function completeTask(button) {
     const task = button.parentElement;
-    task.classList.toggle('completed');
+    task.classList.add('completed');
+    alert("Good Job! :)");
+
+    // Disable the button
+    button.disabled = true;
     saveTasks(); // Save tasks to local storage
 }
 
@@ -57,7 +61,7 @@ function completeTask(button) {
 function editTask(button) {
     const task = button.parentElement;
     const span = task.querySelector('span');
-    const newTask = prompt('Edit task:', span.textContent);
+    const newTask = prompt('Edit this task:', span.textContent);
 
     if (newTask !== null) {
         span.textContent = newTask;
@@ -68,10 +72,13 @@ function editTask(button) {
 // Function to delete a task
 function deleteTask(button) {
     const task = button.parentElement;
-    task.remove();
-    saveTasks(); // Save tasks to local storage
+    const confirmDelete = confirm("Are you sure you want to delete this task?");
+    
+    if (confirmDelete) {
+        task.remove();
+        saveTasks(); // Save tasks to local storage
+    }
 }
-
 // Function to toggle dark mode
 function toggleDarkMode() {
     document.body.classList.toggle('dark-mode');
