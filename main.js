@@ -60,6 +60,13 @@ function completeTask(button) {
 // Function to edit a task
 function editTask(button) {
     const task = button.parentElement;
+
+    // Check if the task is completed
+    if (task.classList.contains('completed')) {
+        // Task is completed, exit the function (disable the editing button)
+        return;
+    }
+
     const span = task.querySelector('span');
     const newTask = prompt('Edit this task:', span.textContent);
 
