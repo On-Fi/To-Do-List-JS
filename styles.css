@@ -10,44 +10,76 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    transition: background-color 0.3s, color 0.3s;
 }
 
 .container {
     background-color: #fff;
     padding: 20px;
+    height: 100vh;
+    width: 256vh;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, color 0.3s;
 }
 
 h1 {
     text-align: center;
     font-size: 3rem;
-    padding: 8px;
+    padding: 4px;
     margin-top: 0px;
     margin-bottom: 0px;
+    cursor: default;
 }
 
 #app {
     text-align: center;
-    transition: background-color 0.3s;
 }
 
 #taskInput {
     padding: 8px;
     margin-right: -4px;
+    margin-top: 0px;
+    margin-bottom: 30px;
 }
 
-button {
+#addTaskBtn{
+    margin-top: 0px;
+    margin-bottom: 22px;
+    margin-left: 0px;
+    padding: 9px;
+    border: 1px solid #1e1e1e;
     cursor: pointer;
 }
 
-button#toggleDarkMode {
+
+button#toggleDarkMode{
     margin-top: 0px;
-    margin-bottom: 22px;
-    margin-left: 103px;
+    margin-bottom: 51px;
+    margin-left: 633px;
     border: 1px solid #1e1e1e;
+    cursor: pointer;
+}
+
+button#completeBtn {
+    padding: 8px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    margin-left: 0px;
+    margin-top: 10px;
+}
+
+button#editBtn {
+    padding: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button#deleteBtn {
+    padding: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    border: 1px solid #fff;
 }
 
 ul {
@@ -56,22 +88,16 @@ ul {
 }
 
 li {
-    display: flex;
-    font-size: 40px;
-    align-items: center;
-    justify-content: space-between;
     border-bottom: 1px solid #ddd;
+    font-size: 50px;
     padding: 8px;
 }
 
 li.completed {
-    color: #33c363;
+    color: #42c890;
 }
 
-/* Dark mode */
-.dark-mode html {
-    background-color: #333;
-}
+/* Dark mode styles */
 .dark-mode body {
     background-color: #333;
     color: #fff;
@@ -83,18 +109,44 @@ li.completed {
 }
 
 .dark-mode #app {
-    background-color: #444; /* Adjust as needed for dark mode background */
+    background-color: #444;
 }
 
 .dark-mode #taskInput {
-    background-color: #555; /* Adjust as needed for dark mode background */
+    background-color: #555;
     color: #fff;
 }
 
-.dark-mode button#toggleDarkMode {
+.dark-mode #addTaskBtn {   
+border: 1px solid #dcdcdc;
+background-color: #333333;
+    color: #fff;
+}
+
+
+.dark-mode button#toggleDarkMode {   
+    border: 1px solid #dcdcdc;
+    background-color: #333333;
+        color: #fff;
+    }
+
+
+.dark-mode button#completeBtn {
     background-color: #555;
     color: #fff;
-    border: 1px solid #fff; /* Border color for dark mode */
+    border: 1px solid #fff;
+}
+.dark-mode button#editBtn  {
+    background-color: #555;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+
+.dark-mode button#deleteBtn {
+    background-color: #555;
+    color: #fff;
+    border: 1px solid #fff;
 }
 
 .dark-mode li {
@@ -102,5 +154,5 @@ li.completed {
 }
 
 .dark-mode li.completed {
-    color: #33c363;
+    color: #36e39b;
 }
