@@ -50,7 +50,6 @@ h1 {
     cursor: pointer;
 }
 
-
 button#toggleDarkMode{
     margin-top: 0px;
     margin-bottom: 51px;
@@ -64,6 +63,7 @@ button#completeBtn {
     cursor: pointer;
     background-color: transparent;
     border: none;
+    margin-right: -4px;
     font-size: 25px;
     margin-left: 0px;
     margin-top: 10px;
@@ -72,19 +72,27 @@ button#completeBtn {
 button#editBtn {
     padding: 8px;
     cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    margin-right: -4px;
+    margin-left: 0px;
     margin-top: 10px;
 }
 
 button#deleteBtn {
     padding: 8px;
     cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    margin-right: -4px;
+    margin-left: 0px;
     margin-top: 10px;
-    border: 1px solid #fff;
 }
 
 ul {
     list-style-type: none;
-    padding: 0;
 }
 
 li {
