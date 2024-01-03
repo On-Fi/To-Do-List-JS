@@ -30,8 +30,12 @@ h1 {
 }
 
 button {
-    padding: 8px;
+    padding: 10px;
+    margin: -12px;
+    border-style: solid;
     cursor: pointer;
+    background-color: transparent;
+    border-radius: 8px;
 }
 
 ul {
