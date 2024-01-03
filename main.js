@@ -1,12 +1,3 @@
-// Function to toggle dark mode
-function toggleDarkMode() {
-    document.body.classList.toggle('dark-mode');
-    document.querySelector('.container').classList.toggle('dark-mode');
-    const taskElements = document.querySelectorAll('#taskList li');
-    taskElements.forEach(task => task.classList.toggle('dark-mode'));
-    saveTasks(); // Save dark mode state to local storage
-}
-
 // Function to load tasks from local storage
 function loadTasks() {
     const savedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
@@ -32,9 +23,9 @@ function createTaskElement(taskText, completed) {
     const newTask = document.createElement('li');
     newTask.innerHTML = `
         <span>${taskText}</span>
-        <button onclick="completeTask(this)">✅</button>
-        <button onclick="editTask(this)">✏️</button>
-        <button onclick="deleteTask(this)">❌</button>
+        <button onclick="completeTask(this)" id="completeBtn">✅</button>
+        <button onclick="editTask(this)" id="editBtn">Edit</button>
+        <button onclick="deleteTask(this)" id="deleteBtn">Delete</button>
     `;
     if (completed) {
         newTask.classList.add('completed');
@@ -79,6 +70,15 @@ function deleteTask(button) {
     const task = button.parentElement;
     task.remove();
     saveTasks(); // Save tasks to local storage
+}
+
+// Function to toggle dark mode
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+    document.querySelector('.container').classList.toggle('dark-mode');
+    const taskElements = document.querySelectorAll('#taskList li');
+    taskElements.forEach(task => task.classList.toggle('dark-mode'));
+    saveTasks(); // Save dark mode state to local storage
 }
 
 // Load tasks when the page is loaded
