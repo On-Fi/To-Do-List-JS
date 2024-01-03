@@ -23,9 +23,9 @@ function createTaskElement(taskText, completed) {
     const newTask = document.createElement('li');
     newTask.innerHTML = `
         <span>${taskText}</span>
-        <button onclick="completeTask(this)">Complete</button>
-        <button onclick="editTask(this)">Edit</button>
-        <button onclick="deleteTask(this)">Delete</button>
+        <button onclick="completeTask(this)">✅</button>
+        <button onclick="editTask(this)">✏️</button>
+        <button onclick="deleteTask(this)">❌</button>
     `;
     if (completed) {
         newTask.classList.add('completed');
