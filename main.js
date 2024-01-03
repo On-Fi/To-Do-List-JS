@@ -9,6 +9,7 @@ function addTask() {
             <span>${taskInput.value}</span>
             <button onclick="completeTask(this)">Complete</button>
             <button onclick="editTask(this)">Edit</button>
+            <button onclick="deleteTask(this)">Delete</button>
         `;
         taskList.appendChild(newTask);
         taskInput.value = '';
@@ -30,4 +31,10 @@ function editTask(button) {
     if (newTask !== null) {
         span.textContent = newTask;
     }
+}
+
+// delete a task fuction
+function deleteTask(button) {
+    const task = button.parentElement;
+    task.remove();
 }
