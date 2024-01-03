@@ -23,6 +23,10 @@ body {
 
 h1 {
     text-align: center;
+    font-size: 3rem;
+    padding: 8px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 #app {
@@ -32,18 +36,18 @@ h1 {
 
 #taskInput {
     padding: 8px;
-    margin-right: 8px;
+    margin-right: -4px;
 }
 
 button {
-    padding: 8px;
     cursor: pointer;
 }
 
 button#toggleDarkMode {
-    margin-top: 10px;
-    align-items: center;
-    justify-content: center;
+    margin-top: 0px;
+    margin-bottom: 22px;
+    margin-left: 103px;
+    border: 1px solid #1e1e1e;
 }
 
 ul {
@@ -53,6 +57,7 @@ ul {
 
 li {
     display: flex;
+    font-size: 40px;
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid #ddd;
@@ -62,7 +67,6 @@ li {
 li.completed {
     color: #33c363;
 }
-
 
 /* Dark mode */
 .dark-mode html {
@@ -80,6 +84,11 @@ li.completed {
 
 .dark-mode #app {
     background-color: #444; /* Adjust as needed for dark mode background */
+}
+
+.dark-mode #taskInput {
+    background-color: #555; /* Adjust as needed for dark mode background */
+    color: #fff;
 }
 
 .dark-mode button#toggleDarkMode {
