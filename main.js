@@ -63,7 +63,7 @@ function editTask(button) {
 
     // Check if the task is completed
     if (task.classList.contains('completed')) {
-        // Task is completed, exit the function (disable the editing button)
+        button.disabled = true; // Task is completed, exit the function (disable the editing button)
         return;
     }
 
@@ -88,10 +88,24 @@ function deleteTask(button) {
 }
 // Function to toggle dark mode
 function toggleDarkMode() {
-    document.body.classList.toggle('dark-mode');
-    document.querySelector('.container').classList.toggle('dark-mode');
+    const body = document.body;
+    const container = document.querySelector('.container');
+    const toggleDarkModeButton = document.getElementById('toggleDarkMode');
+
+    body.classList.toggle('dark-mode');
+    container.classList.toggle('dark-mode');
+
+    if (body.classList.contains('dark-mode')) {
+        // Dark mode is enabled, change button text to moon
+        toggleDarkModeButton.textContent = '🌝';
+    } else {
+        // Dark mode is disabled, change button text to sun
+        toggleDarkModeButton.textContent = '🌚';
+    }
+
     const taskElements = document.querySelectorAll('#taskList li');
     taskElements.forEach(task => task.classList.toggle('dark-mode'));
+
     saveTasks(); // Save dark mode state to local storage
 }
 
