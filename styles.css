@@ -67,7 +67,7 @@ button#toggleDarkMode{
     margin-top: 1px;
     margin-bottom: 51px;
     margin-left: 633px;
-    margin-right: -4px;
+    margin-right: 0px;
     font-size: 2rem;
     padding: 0;
     border: none;
@@ -120,6 +120,10 @@ li {
     cursor: default;
 }
 
+li:not(.completed):first-child {
+    border-top: 1px solid #ddd; /* Adjust the border-top color */
+}
+
 li.completed {
     color: #42c890;
 }
@@ -129,7 +133,6 @@ li.completed {
     background-color: #444;
     color: #fff;
 }
-
 
 .dark-mode #taskInput {
     background-color: #555;
@@ -144,6 +147,10 @@ li.completed {
 
 .dark-mode li {
     border-bottom: 1px solid #666;
+}
+
+.dark-mode li:not(.completed):first-child {
+    border-top: 1px solid #666;
 }
 
 .dark-mode li.completed {
