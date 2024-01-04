@@ -1,5 +1,5 @@
 # My To Do List
- This is my version of the old classic for every developer. :) <br>
+ This is my version of the old classic for every developer. :] <br>
  Some of the **cool** features of this app:
  - every Entry can be **edited**, **deleted** and **completed** by clicking either one of this three buttons ✏️, ❌ and ✅
  - if you click the **edit** ✏️ Button you get a **popup message** "**Edit this task:**" and there you can edit the Entry
@@ -10,3 +10,6 @@
  - the Inputfield is **autoselected onload** (even if you reload the Page) and after every new Entry,too
  - every Button has a little **hover effect** to indicate that you are on the Button
  - **and the most important feature for sure** it has a **Darkmode** option, by clicking the 🌚 button you activate it
+
+ So if you want to check out the app just click this (link)[on-fi.github.io/To-Do-List-JS/] :]
+
