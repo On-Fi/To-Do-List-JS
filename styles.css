@@ -1,5 +1,3 @@
-
-
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
@@ -33,7 +31,16 @@ h1 {
 
 #app {
     text-align: center;
-    height: 100vh;
+}
+
+button {
+    transition: background-color 0.3s, color 0.3s, transform 0.3s ;
+}
+
+button:hover {
+    background-color: #ddd; 
+    color: #333; 
+    transform: scale(1.1); 
 }
 
 #taskInput {
@@ -53,7 +60,6 @@ h1 {
     padding: 9px;
     font-size: 25px;
     border-radius: 10px;
-    border: 1px solid #1e1e1e;
     cursor: pointer;
 }
 
@@ -63,9 +69,9 @@ button#toggleDarkMode{
     margin-left: 633px;
     margin-right: -4px;
     font-size: 2rem;
-    background-color: lightgray;
-    border-radius: 10px;
-    border: 1px solid #1e1e1e;
+    padding: 0;
+    border: none;
+    background: none;
     cursor: pointer;
 }
 
@@ -119,23 +125,11 @@ li.completed {
 }
 
 /* Dark mode styles */
-.dark-mode html {
-    background-color: #444;
-}
-
-.dark-mode body {
-    background-color: #333;
-    color: #fff;
-}
-
 .dark-mode .container {
     background-color: #444;
     color: #fff;
 }
 
-.dark-mode #app {
-    background-color: #444;
-}
 
 .dark-mode #taskInput {
     background-color: #555;
@@ -143,48 +137,8 @@ li.completed {
 }
 
 .dark-mode #addTaskBtn {   
-border: 1px solid #dcdcdc;
-background-color: #333333;
-    color: #fff;
-}
-
-
-.dark-mode button#toggleDarkMode {   
-    border: 1px solid #dcdcdc;
     background-color: #333333;
-        color: #fff;
-    }
-
-
-.dark-mode button#completeBtn {
-    padding: 8px;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-    font-size: 25px;
-    margin-left: 15px;
-    margin-top: -11px;
-}
-.dark-mode button#editBtn  {
-        padding: 8px;
-        cursor: pointer;
-        background-color: transparent;
-        border: none;
-        font-size: 25px;
-        margin-right: -4px;
-        margin-left: -14px;
-        margin-top: -9px;
-}
-
-.dark-mode button#deleteBtn {
-    padding: 8px;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-    font-size: 25px;
-    margin-right: -4px;
-    margin-left: -10px;
-    margin-top: -5px;
+    color: #fff;
 }
 
 .dark-mode li {
