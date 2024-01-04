@@ -43,6 +43,9 @@ function addTask() {
         taskList.appendChild(newTask);
         taskInput.value = '';
         saveTasks(); // Save tasks to local storage
+
+        // Automatically select the input field after adding a task
+        taskInput.focus();
     }
 }
 
@@ -111,3 +114,9 @@ function toggleDarkMode() {
 
 // Load tasks when the page is loaded
 loadTasks();
+
+// Select the task input field on page load
+window.onload = function() {
+    const taskInput = document.getElementById('taskInput');
+    taskInput.focus();
+};
