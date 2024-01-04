@@ -11,5 +11,5 @@
  - every Button of the App has a little **hover effect** to indicate that you are on the Button
  - **and the most important feature for sure** it has a **Darkmode** option (*by clicking the 🌚 button you activate it*)
 
- So if you want to check out the App ➔ [CLICK ME!](https://on-fi.github.io/To-Do-List-JS/) :]
+ So if you want to check out the App ➔ [CLICK HERE!](https://on-fi.github.io/To-Do-List-JS/) :]
 
