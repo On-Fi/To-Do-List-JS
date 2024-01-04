@@ -63,7 +63,7 @@ function editTask(button) {
 
     // Check if the task is completed
     if (task.classList.contains('completed')) {
-        // Task is completed, exit the function (disable the editing button)
+        button.disabled = true; // Task is completed, exit the function (disable the editing button)
         return;
     }
 
